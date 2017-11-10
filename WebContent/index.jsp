@@ -6,27 +6,23 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
-<style>
- td{
- 	border: 1px solid gray;
- }
- table{
- 	border: 1 px solid gray;
- 	padding: 10x
- 
- }
-</style>
 <body>
+<div class="container">
        <h1>Catálogo de clientes</h1>
        <h2>Clientes encontrados:
              <%
              List<Cliente> clientes = (List<Cliente>)session.getAttribute("clientes");
              out.println(clientes.size());
              %>
-             <table>
+       </h2>
+             <table class="table table-hover">
              	<%
              		for(Cliente cliente:clientes){
              			out.println("<tr>");
@@ -49,7 +45,8 @@
              	%>
              
              </table>
-       </h2>
+       
+</div>  
 </body>
 
 </html>
